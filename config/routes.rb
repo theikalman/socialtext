@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get "homepage", to: "homepage#index"
+  get "home", to: "homepage#index"
 
   get "feeds", to: "feeds#index"
 

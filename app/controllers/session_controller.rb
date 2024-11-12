@@ -1,5 +1,5 @@
 class SessionController < ApplicationController
-  before_action :authenticate_user!
+  before_action :check_user_login!
 
   def destroy
     # TODO: need to only delete the current active user

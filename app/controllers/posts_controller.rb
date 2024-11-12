@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :check_user_login!
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # POST /posts
