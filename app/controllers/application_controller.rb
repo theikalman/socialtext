@@ -5,10 +5,10 @@ class ApplicationController < ActionController::Base
   protected
 
   def check_user_login!
-    if user_signed_in?
-      redirect_to feeds_path
-    else
-      redirect_to home_path
+    if !user_signed_in?
+      if request.path != root_path
+        redirect_to root_path
+      end
     end
   end
 end

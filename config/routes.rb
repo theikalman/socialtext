@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-  get "home", to: "homepage#index"
-
   get "feeds", to: "feeds#index"
 
-  delete "logout", to: "session#destroy"
+  resources :posts
 
   devise_for :users
 
@@ -15,5 +13,5 @@ Rails.application.routes.draw do
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
-  root "homepage#index"
+  root "feeds#index"
 end

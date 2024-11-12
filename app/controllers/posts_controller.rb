@@ -16,6 +16,9 @@ class PostsController < ApplicationController
     end
   end
 
+  def index
+  end
+
   private
 
   # Only allow a list of trusted parameters through.
